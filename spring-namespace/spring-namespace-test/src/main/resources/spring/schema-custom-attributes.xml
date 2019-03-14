@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:jcache="http://www.foo.com/schema/jcache"
+       xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.foo.com/schema/jcache http://www.foo.com/schema/jcache/jcache.xsd">
+
+    <!-- 自定义属性 -->
+    <bean id="checkingAccountService" class="com.foo.DefaultCheckingAccountService"
+          jcache:cache-name="checking.account">
+        <property name="url" value="test01"/>
+    </bean>
+
+</beans>
